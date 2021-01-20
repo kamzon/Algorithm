@@ -137,6 +137,6 @@ insert(tree, Node(12.5))
 
 in_order_print(tree)
 #pre_order_print(tree)
-print("delete 1")
+print("delete 12")
 delete_node(tree, 12)
 in_order_print(tree)
