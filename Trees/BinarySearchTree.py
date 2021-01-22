@@ -113,6 +113,28 @@ def delete_node(root, data):
     return root
 
 
+def Low_common_ancestor(root,node1,node2):
+    
+    if(root == None):
+        return None
+    
+    else:
+        if(root.data == node1.data and root.data == node2.data):
+            return root
+        
+        elif((root.data > node1.data and root.data < node2.data) or (root.data < node1.data and root.data > node2.data)):
+            return root
+        
+        elif(root.data > node1.data and root.data > node2.data):
+            return Low_common_ancestor(root.l_child, node1, node2)
+        
+        elif(root.data < node1.data and root.data < node2.data):
+            return Low_common_ancestor(root.r_child, node1, node2)
+        
+    
+    
+
+
 
     
 """ example"""
